@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "rag-pdf-multi-vector-retriver"
+version = "0.0.1"
+description = ""
+authors = []
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8.1,<4.0"
+langchain-core = ">=0.1.5,<0.3"
+langchain-openai = ">=0.0.1"
+langchain = "^0.2.13"
+langchain-chroma = "^0.1.2"
+langchain-community = "^0.2.12"
+pypdf = "^4.3.1"
+
+
+[tool.poetry.group.dev.dependencies]
+langchain-cli = ">=0.0.4"
+fastapi = "^0.104.0"
+sse-starlette = "^1.6.5"
+
+[tool.langserve]
+export_module = "rag_pdf_multi_vector_retriver"
+export_attr = "chain"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
